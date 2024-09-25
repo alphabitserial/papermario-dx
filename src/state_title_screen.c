@@ -122,7 +122,7 @@ void title_screen_draw_press_start(void);
 void title_screen_draw_copyright(f32);
 
 // zig
-extern s32 sum(s32 x, s32 y);
+extern s32 add(s32 x, s32 y);
 
 void state_init_title_screen(void) {
     s32 titleDataSize;
@@ -206,7 +206,7 @@ void state_init_title_screen(void) {
 
     // zig test
     osSyncPrintf("Calling into zig...\n");
-    osSyncPrintf("zig says 3 + 5 = %d\n", sum(3, 5));
+    osSyncPrintf("zig says 3 + 5 = %d\n", add(3, 5));
 }
 
 void state_step_title_screen(void) {

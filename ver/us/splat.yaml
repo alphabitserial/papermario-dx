@@ -131,7 +131,7 @@ segments:
     - [auto, c, 111f0_len_860] # possibly still state_world
     - [auto, c, state_intro]
     - [auto, c, state_title_screen]
-    - [auto, staticlib, libfoo]
+    - [auto, a, libfoo]
     - [auto, c, state_demo]
     - [auto, c, npc]
     - [auto, c, encounter]
