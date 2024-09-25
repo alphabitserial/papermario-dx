@@ -1,4 +1,5 @@
 #include "common.h"
+#include "PR/os_libc.h"
 #include "nu/nusys.h"
 #include "hud_element.h"
 #include "sprite.h"
@@ -120,6 +121,9 @@ void title_screen_draw_logo(f32);
 void title_screen_draw_press_start(void);
 void title_screen_draw_copyright(f32);
 
+// zig
+extern s32 sum(s32 x, s32 y);
+
 void state_init_title_screen(void) {
     s32 titleDataSize;
     void* titleDataDst;
@@ -199,6 +203,10 @@ void state_init_title_screen(void) {
     set_background(&gBackgroundImage);
     bgm_set_song(0, SONG_MAIN_THEME, 0, 500, 8);
     TitleScreen_TimeLeft = 480;
+
+    // zig test
+    osSyncPrintf("Calling into zig...\n");
+    osSyncPrintf("zig says 3 + 5 = %d\n", sum(3, 5));
 }
 
 void state_step_title_screen(void) {
